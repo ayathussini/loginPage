@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="welcome-container">
+        <h1 id="welcomeMessage">Welcome!</h1>
+        <p >We are glad to have you here.</حstyle=>
+    </div>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const username = params.get('username');
+
+    
+        const welcomeMessage = document.getElementById('welcomeMessage');
+        if (username) {
+            welcomeMessage.textContent = `Welcome, ${username}!`;
+        }
+    </script>
+</body>
+
+</html>
